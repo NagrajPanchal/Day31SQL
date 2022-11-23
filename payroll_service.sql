@@ -21,6 +21,10 @@ Select * from employee_payroll;
 
 Select * from employee_payroll where name = "Nagraj";
 Select * from employee_payroll where start_date BETWEEN CAST('2018-01-01'AS DATE) AND DATE(NOW());
+/*Add Column*/
+alter table employee_payroll add gender varchar(20) after start_date;
+/*Update gender*/
+update employee_payroll set gender = "male";
 
 
 
