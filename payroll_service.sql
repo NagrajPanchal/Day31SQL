@@ -31,7 +31,7 @@ from employee_payroll where gender = "male"
 group by gender; 
 /*ER Diagram */
 
-alter table employee_payroll add phone int after gender;
+alter table employee_payroll modify phone long after gender;
 alter table employee_payroll add address varchar(40) after phone;
 alter table employee_payroll add department varchar(30) after address;
 alter table employee_payroll modify department varchar(30) not null;
@@ -42,6 +42,9 @@ alter table employee_payroll add Deductions int;
 alter table employee_payroll add Taxable_Pay int;
 alter table employee_payroll add Income_Tax int;
 alter table employee_payroll add Net_Pay int;
+
+insert into employee_payroll (name,salary,start_date,gender,phone,department,Basic_Pay,Deductions,Taxable_Pay,Income_Tax,Net_Pay) 
+values("Terissa",35000,'2022-03-04',"female",9739713842,"Marketing",25000,1000,500,1000,22500);
 
 
 
