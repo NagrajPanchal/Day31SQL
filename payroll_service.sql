@@ -15,6 +15,8 @@ primary key(id)
 /* Insert into employee_payroll */
 insert into employee_payroll (name,salary,start_date) values("Nagraj",25000,'2018-01-01');
 
+/* Show table */
+Select * from employee_payroll;
 
 
 
