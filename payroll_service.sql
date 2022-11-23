@@ -48,6 +48,23 @@ values("Terissa",35000,'2022-03-04',"female",9739713842,"Marketing",25000,1000,5
 /*Payroll Service DB */
 Select * from employee_payroll where name = "Terissa";
 
+/* Create table */
+create table employee_department
+(
+department_id int auto_increment,
+department_name varchar(30) default 'Sales',
+emp_department_id int not null,
+primary key (department_id),
+foreign key (emp_department_id) references employee_payroll(id)
+on delete cascade
+);
+
+/* insert records into table */
+insert into employee_department(department_name,emp_department_id) values("Marketing",1),("Sales",2),("Admin",3),("HR",4),("Devops",5);
+
+/* Show all records in the table */ 
+Select * from employee_department;
+
 
 
 
