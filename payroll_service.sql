@@ -25,6 +25,12 @@ Select * from employee_payroll where start_date BETWEEN CAST('2018-01-01'AS DATE
 alter table employee_payroll add gender varchar(20) after start_date;
 /*Update gender*/
 update employee_payroll set gender = "male";
+/* Aggregate Functions*/
+Select min(id),max(id),avg(id),count(id),sum(id) 
+from employee_payroll where gender = "male"
+group by gender; 
+
+
 
 
 
