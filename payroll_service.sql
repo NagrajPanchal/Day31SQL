@@ -9,6 +9,12 @@ create table employee_payroll (
 id int auto_increment, 
 name varchar(20),
 salary int,
-start_data date,
+start_date date,
 primary key(id)
 );
+/* Insert into employee_payroll */
+insert into employee_payroll (name,salary,start_date) values("Nagraj",25000,'2018-01-01');
+
+
+
+
