@@ -37,6 +37,12 @@ alter table employee_payroll add department varchar(30) after address;
 alter table employee_payroll modify department varchar(30) not null;
 alter table employee_payroll modify address varchar(40) default 'Bengaluru';
 
+alter table employee_payroll add Basic_Pay int;
+alter table employee_payroll add Deductions int;
+alter table employee_payroll add Taxable_Pay int;
+alter table employee_payroll add Income_Tax int;
+alter table employee_payroll add Net_Pay int;
+
 
 
 
