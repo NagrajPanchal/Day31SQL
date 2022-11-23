@@ -45,7 +45,8 @@ alter table employee_payroll add Net_Pay int;
 
 insert into employee_payroll (name,salary,start_date,gender,phone,department,Basic_Pay,Deductions,Taxable_Pay,Income_Tax,Net_Pay) 
 values("Terissa",35000,'2022-03-04',"female",9739713842,"Marketing",25000,1000,500,1000,22500);
-
+/*Payroll Service DB */
+Select * from employee_payroll where name = "Terissa";
 
 
 
