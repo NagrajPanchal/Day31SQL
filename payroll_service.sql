@@ -65,7 +65,17 @@ insert into employee_department(department_name,emp_department_id) values("Marke
 /* Show all records in the table */ 
 Select * from employee_department;
 
+/* Inner Join*/
+Select * from employee_payroll as ep
+inner join employee_department as ed 
+on ep.id = ed.emp_department_id;
 
+Select ep.name,ed.department_name from employee_payroll as ep
+inner join employee_department as ed
+on ep.id = ed.emp_department_id
+where ep.name = "Nagraj";
 
+Select min(department_id),max(department_id),avg(department_id),count(department_id),sum(department_id) 
+from employee_department; 
 
 
